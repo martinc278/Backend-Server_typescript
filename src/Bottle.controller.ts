@@ -16,9 +16,9 @@ export class BottleController {
   }
 
   @Get()
-  allBottle(@Body() bouteilleDTo: BouteilleDTO) {
+  allBottle(@Param('id') cellarID: string) {
     let cellar_int : Cellars = this.cellarService.getOneCellars(cellarID);
-    cellar_int.addBottle(bouteilleDTo.name, bouteilleDTo.price);
+    return cellar_int.getAllBottle();
   }
 }
 

@@ -49,4 +49,8 @@ export class Cellars {
     }
     return somme;
   }
+
+  getAllBottle(): Bouteille[] {
+    return this.tabBouteilles;
+  }
 }
